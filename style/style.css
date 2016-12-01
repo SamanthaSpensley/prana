@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300|Source+Sans+Pro:300');
+/*font-family: 'Fjalla One', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;*/
+
+.container-fluid {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #028090;
+  max-width: 100%;
+  /*height: 100;*/
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+  height: 500px;
+  color: white;
+}
+
+.btn-lg {
+  /*background: #30CDAC !important;*/
+  background: -webkit-linear-gradient(-90deg, , #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #02C39A, #14C96E); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #02C39A, #14C96E); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #02C39A, #14C96E); /* Standard syntax */
+  color: white !important;
+  margin-top: 1.5vw;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
