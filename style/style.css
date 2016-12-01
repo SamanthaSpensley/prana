@@ -3,14 +3,14 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;*/
 
-.container-fluid {
+/* ----- structure ----- */
+.home {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #028090;
   max-width: 100%;
-  /*height: 100;*/
 }
 
-.landing {
+.banner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,19 +20,50 @@ font-family: 'Source Sans Pro', sans-serif;*/
   color: white;
 }
 
+.welcome {
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding-top: 5vw;
+}
+
+/* ----- buttons ----- */
 .btn-lg {
   /*background: #30CDAC !important;*/
-  background: -webkit-linear-gradient(-90deg, , #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(-90deg, #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #02C39A, #14C96E); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #02C39A, #14C96E); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-90deg, #02C39A, #14C96E); /* Standard syntax */
+  box-shadow: 0 2px 5px  #193047;
   color: white !important;
   margin-top: 1.5vw;
+  padding-left: 5vw !important;
+  padding-right: 5vw !important;
 }
 
+.btn-lg:hover {
+  background: webkit-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #02B28C, #2CBB9D); /* Standard syntax */
+}
+
+.btn-lg:after {
+  box-shadow: inset 0 5px 30px #193047;
+}
+
+/* ----- images ----- */
 .logo {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
+}
+
+/* ----- type ----- */
+h1 {
+  font-size: 285% !important;
+  letter-spacing: 1.5px;
 }

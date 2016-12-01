@@ -3,21 +3,24 @@ import { Link } from 'react-router';
 
 const Landing = (props) => {
   return (
-    <div className="container">
-      <div className="row" >
-        <div className="col-xs-12 col-md-8 landing">
-          <h1>Realize the mind-body benefits of breathing</h1>
-          <Link to={ "/breathers" } className="btn btn-lg pull-left">Take a Breather</Link>
-        </div>
-        <div className=" col-xs-12 col-md-4 landing">
-          <img className="logo" src='../../assets/logo.jpg' alt="logo" />
+    <div className="home">
+      <div className="container">
+        <div className="row" >
+          <div className="col-xs-12 col-md-8 banner">
+            <h1>Start realizing the mind-body benefits of breathing</h1>
+            <Link to={ "/breathers" } className="btn btn-lg pull-left">Take a Breather</Link>
+          </div>
+          <div className="hidden-sm-down col-md-4 banner">
+            <img className="logo" src='../../assets/logo.jpg' alt="logo" />
+          </div>
         </div>
       </div>
-
-      <div className="row">
-        <p></p>
+      <div className="welcome container-fluid">
+        <div className="row">
+          <h1>Welcome to Prana No. 5</h1>
+          <p></p>
+        </div>
       </div>
-      <h4></h4>
     </div>
   )
 }
