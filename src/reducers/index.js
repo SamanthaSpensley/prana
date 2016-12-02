@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import SequenceReducer from './reducer_sequences';
+import SequencesReducer from './reducer_sequences';
+import ActiveSequence from './reducer_active_sequence';
 
 const rootReducer = combineReducers({
-  sequences: SequenceReducer
+  sequences: SequencesReducer,
+  activeSequence: ActiveSequence
 });
 
 export default rootReducer;
