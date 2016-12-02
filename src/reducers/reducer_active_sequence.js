@@ -1,23 +1,25 @@
+import Sequences from './reducer_sequences';
 import { FETCH_SEQUENCES, FETCH_SEQUENCE } from '../actions/index';
 
-export default function(state = {}, action) {
+const INITIAL_STATE = { all: Sequences(), sequence: null }
+
+export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
   case 'FETCH_SEQUENCE':
-    return { ...state, sequence: action.payload };
+    return { ...state, sequence: action.payload.data };
+  case 'FETCH_SEQUENCES':
+    return { ...state, all: action.payload.data };
+  default:
+    return state;
   }
-  return state;
 }
 
 
-// const INITIAL_STATE = { all: [], sequence: null }
-//
-// export default function(state = INITIAL_STATE, action) {
+
+// export default function(state = {}, action) {
 //   switch(action.type) {
 //   case 'FETCH_SEQUENCE':
 //     return { ...state, sequence: action.payload };
-//   case 'FETCH_SEQUENCES':
-//     return { ...state, all: action.payload };
-//   default:
-//     return state;
 //   }
+//   return state;
 // }

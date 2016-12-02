@@ -15,7 +15,7 @@ export function fetchSequences() {
 // get sequence by id
 export function fetchSequence(id) {
   function findById(sequence) {
-    return sequence.id === id;
+    return sequence.id == id;
   }
 
   const request = Sequences().find(findById)

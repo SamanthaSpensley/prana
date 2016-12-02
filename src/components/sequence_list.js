@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { fetchSequences } from '../actions/index';
 import { Link } from 'react-router';
 
-// takes the application state; whatever is returned will show up inside SequenceList
-// the object returned is available as this.props
-function mapStateToProps(state) {
-  return {
-    sequences: state.sequences //state.sequences references piece of state 'sequences' from reducers/index.js
-  };
-}
-
 class SequenceList extends Component {
+  componentWillMount() {
+    console.log(this.props.fetchSequences());
+  }
+
   renderList() {
     // map over sequences array and return an <li> for each sequence
     return this.props.sequences.map((sequence) => {
@@ -25,8 +21,8 @@ class SequenceList extends Component {
 
   render() {
     return (
-      <div>
-        <ul className="list-group col-sm-12">
+      <div className="container">
+        <ul className="list-group col-xs-12">
           {this.renderList()}
         </ul>
         <Link to={"/"} className="btn btn-danger">Peace out</Link>
@@ -35,7 +31,13 @@ class SequenceList extends Component {
   }
 }
 
-export default connect(mapStateToProps)(SequenceList);
+// takes the application state; whatever is returned will show up inside SequenceList
+// the object returned is available as this.props
+function mapStateToProps(state) {
+  return { sequences: state.sequences.all }; //state.sequences references piece of state 'sequences' from reducers/index.js
+}
+
+export default connect(mapStateToProps, { fetchSequences: fetchSequences })(SequenceList);
 
 // import React, { Component } from 'react';
 // import { connect } from 'react-redux';
