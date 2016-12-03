@@ -12,21 +12,41 @@ class SequenceList extends Component {
     // map over sequences array and return an <li> for each sequence
     return this.props.sequences.map((sequence) => {
       return (
-        <li key={sequence.id} className="list-group-item" >
-          <Link to={"breathers/" + sequence.id} className="btn btn-block">{sequence.title}</Link>
+        <div>
+          <li key={ sequence.id } className="list-group-item sequence">
+            <Link to={ "breathers/" + sequence.id } className="btn btn-block">{ sequence.title }</Link>
+            <div>
+              <h5>{ sequence.description }</h5>
+              <h3>Inhale: { sequence.inhale } counts</h3>
+
+              { sequence.initialHold > 0 &&
+                <h3>
+                  Hold: { sequence.initialHold } counts
+                </h3>
+              }
+              <h3>Exhale: { sequence.exhale } counts</h3>
+              { sequence.secondaryHold > 0 &&
+                <h3>Hold: { sequence.secondaryHold } counts</h3>
+              }
+            </div>
         </li>
+        </div>
       );
     });
   }
 
   render() {
     return (
-      <div className="container">
-        <ul className="list-group col-xs-12">
-          {this.renderList()}
-        </ul>
-        <Link to={"/"} className="btn btn-danger">Peace out</Link>
-      </div>
+      // <div className="row">
+        <div className="sequence-list col-md-6 col-md-offset-3">
+          <h1>Select a Breather:</h1>
+          <ul className="list-group col-xs-12">
+            {this.renderList()}
+          </ul>
+          <Link to={"/"} className="btn btn-danger">Peace out</Link>
+        </div>
+
+      // </div>
     );
   }
 }

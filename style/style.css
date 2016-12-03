@@ -4,17 +4,17 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;*/
 
 /* ----- structure ----- */
-.home {
+.home, .sequence-list {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #028090;
   background: -webkit-linear-gradient(-90deg, #13505B, #196C76); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #13505B, #196C76); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #13505B, #196C76); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-90deg, #13505B, #196C76); /* Standard syntax */
-  max-width: 100%;
+  max-width: 100vw;
 }
 
-.banner {
+.banner  {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,10 +36,20 @@ font-family: 'Source Sans Pro', sans-serif;*/
   flex-direction: column;
   align-items: center;
 }
+.sequence-list {
+  /*display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;*/
+  width: 100vw;
+  height: 100%;
+  color: white;
+}
 
 .recap {
   margin-top: 5vw;
 }
+
 
 /* ----- buttons ----- */
 .btn-lg {
@@ -87,6 +97,9 @@ font-family: 'Source Sans Pro', sans-serif;*/
 }
 
 /* ----- lists ----- */
+ul {
+  margin-top: 2vw !important;
+}
 
 li {
   margin-bottom: 2vw !important;
@@ -96,6 +109,15 @@ li {
   border: none !important;
 }
 
+.sequence {
+  border-style: solid !important;
+  border-width: thin !important;
+}
+
+.sequence a {
+  font-size: 25px !important;
+  letter-spacing: 1.5px !important;
+}
 
 /* ----- images ----- */
 .logo {
@@ -114,4 +136,9 @@ h1 {
 h5 {
   letter-spacing: 1.5px;
   margin-bottom: 2vw;
+}
+
+.sequence h3, h5, p {
+  color: #151515;
+  letter-spacing: 0;
 }
