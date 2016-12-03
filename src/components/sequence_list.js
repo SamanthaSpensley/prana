@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSequences } from '../actions/index';
 import { Link } from 'react-router';
+import FontAwesome from 'react-fontawesome';
 
 class SequenceList extends Component {
   componentWillMount() {
@@ -15,7 +16,9 @@ class SequenceList extends Component {
         <div>
           <li key={ sequence.id } className="list-group-item sequence">
             <Link to={ "breathers/" + sequence.id } className="btn btn-block">{ sequence.title }</Link>
+            {/* <FontAwesome name="fa fa-angle-down" aria-hidden="true" /> */}
             <div>
+              <hr/>
               <h5>{ sequence.description }</h5>
               <h3>Inhale: { sequence.inhale } counts</h3>
 
@@ -37,16 +40,15 @@ class SequenceList extends Component {
 
   render() {
     return (
-      // <div className="row">
-        <div className="sequence-list col-md-6 col-md-offset-3">
+      <div className="sequence-list">
+        <div className="container col-md-8 col-md-offset-2">
           <h1>Select a Breather:</h1>
-          <ul className="list-group col-xs-12">
+          <ul className="list-group">
             {this.renderList()}
           </ul>
-          <Link to={"/"} className="btn btn-danger">Peace out</Link>
+          <Link to={"/"} className="btn btn-danger">Peace out (back to home) <i className="fa fa-hand-peace-o" aria-hidden="true"></i></Link>
         </div>
-
-      // </div>
+      </div>
     );
   }
 }
@@ -58,44 +60,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchSequences: fetchSequences })(SequenceList);
-
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { Link } from 'react-router';
-// import { fetchSequences } from '../actions/index';
-//
-// // takes the application state; whatever is returned will show up inside SequenceList
-// // the object returned is available as this.props
-// function mapStateToProps(state) {
-//   return { sequences: state.sequences.all };//state.sequences references piece of state 'sequences' from reducers/index.js
-// }
-//
-// class SequenceList extends Component {
-//   componentWillMount() {
-//     this.props.fetchSequences()
-//   }
-//
-//   renderList() {
-//     // map over sequences array and return an <li> for each sequence
-//     return this.props.sequences.map((sequence) => {
-//       return (
-//         <li key={sequence.id} className="list-group-item" >
-//           <Link to={"breathers/" + sequence.id} className="btn btn-block">{sequence.title}</Link>
-//         </li>
-//       );
-//     });
-//   }
-//
-//   render() {
-//     return (
-//       <div>
-//         <ul className="list-group col-sm-12">
-//           {this.renderList()}
-//         </ul>
-//         <Link to={"/"} className="btn btn-danger">Peace out</Link>
-//       </div>
-//     );
-//   }
-// }
-//
-// export default connect(mapStateToProps, { fetchSequences: fetchSequences })(SequenceList);

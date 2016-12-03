@@ -14,9 +14,6 @@ class SequenceShow extends Component {
   }
 
   render() {
-    // if (!this.props.sequence) {
-    //   return <div>Loading...</div>
-    // }
     console.log("this is this.props.sequence:", this.state.sequence);
     return <div>
       Show sequence { this.state.sequence.title }
