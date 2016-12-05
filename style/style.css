@@ -47,6 +47,11 @@ font-family: 'Source Sans Pro', sans-serif;*/
   background-color: white !important;
   width: 100vw;
   height: 100%;
+  margin-top: 5vw;
+}
+
+.sequence-customize {
+  margin-top: 5vw;
 }
 
 .recap {
@@ -100,6 +105,7 @@ li {
 .sequence {
   border-style: solid !important;
   border-width: thin !important;
+  border-color: #D3D3D3 !important;
 }
 
 .sequence a {

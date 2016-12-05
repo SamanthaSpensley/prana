@@ -20,16 +20,16 @@ class SequenceList extends Component {
             <div>
               <hr/>
               <h5>{ sequence.description }</h5>
-              <h3>Inhale: { sequence.inhale } counts</h3>
+              <h4>Inhale: { sequence.inhale } counts</h4>
 
               { sequence.initialHold > 0 &&
-                <h3>
+                <h4>
                   Hold: { sequence.initialHold } counts
-                </h3>
+                </h4>
               }
-              <h3>Exhale: { sequence.exhale } counts</h3>
+              <h4>Exhale: { sequence.exhale } counts</h4>
               { sequence.secondaryHold > 0 &&
-                <h3>Hold: { sequence.secondaryHold } counts</h3>
+                <h4>Hold: { sequence.secondaryHold } counts</h4>
               }
             </div>
         </li>
