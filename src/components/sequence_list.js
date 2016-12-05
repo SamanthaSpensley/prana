@@ -41,12 +41,12 @@ class SequenceList extends Component {
   render() {
     return (
       <div className="sequence-list">
-        <div className="container col-md-8 col-md-offset-2">
+        <div className="container col-xs-12 col-md-8 col-md-offset-2 float-none">
           <h1>Select a Breather:</h1>
           <ul className="list-group">
             {this.renderList()}
           </ul>
-          <Link to={"/"} className="btn btn-danger">Peace out (back to home) <i className="fa fa-hand-peace-o" aria-hidden="true"></i></Link>
+          <Link to={"/"} className="btn btn-lg">Peace out (back to home)</Link>
         </div>
       </div>
     );

@@ -10,8 +10,13 @@ const Landing = (props) => {
             <h1>Start unleashing the mind-body benefits of breathing</h1>
             <Link to={ "/breathers" } className="btn btn-lg pull-left">Take a Breather</Link>
           </div>
-          <div className="hidden-sm-down col-md-4 banner">
-            <img className="logo" src='../../assets/logo.jpg' alt="logo" />
+          <div className="hidden-sm-down col-md-4 col-md-offset-1 float-none banner">
+            <div className="bg">
+            	<span className="spinner fa fa-spinner fa-5x">
+              </span>
+            </div>
+
+            {/* <img className="logo" src='../../assets/logo.jpg' alt="logo" /> */}
           </div>
         </div>
       </div>

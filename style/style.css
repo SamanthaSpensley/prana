@@ -4,13 +4,13 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;*/
 
 /* ----- structure ----- */
-.home, .sequence-list {
+.home {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #028090;
-  background: -webkit-linear-gradient(-90deg, #13505B, #196C76); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, #13505B, #196C76); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, #13505B, #196C76); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, #13505B, #196C76); /* Standard syntax */
+  background: -webkit-linear-gradient(-90deg, #23F0C7, #196C76); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #23F0C7, #196C76); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #23F0C7, #196C76); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #23F0C7, #196C76); /* Standard syntax */
   max-width: 100vw;
 }
 
@@ -23,6 +23,12 @@ font-family: 'Source Sans Pro', sans-serif;*/
   height: 500px;
   color: white;
 }
+
+/*.shadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(52,52,52,0.32);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(52,52,52,0.32);
+  box-shadow: 0px 5px 10px 0px rgba(52,52,52,0.32);
+}*/
 
 .welcome {
   background-color: white;
@@ -37,19 +43,19 @@ font-family: 'Source Sans Pro', sans-serif;*/
   align-items: center;
 }
 .sequence-list {
-  /*display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;*/
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white !important;
   width: 100vw;
   height: 100%;
-  color: white;
 }
 
 .recap {
   margin-top: 5vw;
 }
 
+.float-none {
+  float: none;
+}
 
 /* ----- buttons ----- */
 .btn-lg {
@@ -76,25 +82,7 @@ font-family: 'Source Sans Pro', sans-serif;*/
   box-shadow: inset 0 5px 30px #193047;
 }
 
-.btn-block:hover {
-  text-decoration: none !important;
-  /*background-color: #2CBB9D !important;*/
-}
 
-.btn-danger {
-  background-color: #5A2749;
-  border: none;
-  box-shadow: 0 2px 5px  #193047;
-}
-.btn-danger:hover {
-  background-color: #522342;
-  border: none;
-}
-
-.btn-danger:active:focus {
-  background-color: #522342;
-  border: none;
-}
 
 /* ----- lists ----- */
 ul {
@@ -141,4 +129,36 @@ h5 {
 .sequence h3, h5, p {
   color: #151515;
   letter-spacing: 0;
+}
+
+/* ----- animations ----- */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg) scale(2.0);
+		color: #fff;
+    opacity: 0.5;
+	}
+	45% {
+		transform: rotate(180deg) scale(3.75);
+		color: #fff;
+	}
+	50% {
+		transform: rotate(180deg) scale(3.75);
+		color: #fff;
+    opacity: 1;
+	}
+	55% {
+		transform: rotate(180deg) scale(3.75);
+		color: #fff;
+	}
+	100% {
+		transform: rotate(360deg) scale(2.0);
+		color: #fff;
+    opacity: 0.5;
+	}
+}
+
+.spinner {
+	/*font-size: 50vmin;*/
+	animation: spin 8s ease-in-out infinite;
 }

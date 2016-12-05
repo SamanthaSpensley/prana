@@ -6,8 +6,13 @@ export default class SequenceDetail extends Component {
   }
   render() {
     return(
-      <div>
-        
+      <div class="breath">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
       </div>
     )
   }
