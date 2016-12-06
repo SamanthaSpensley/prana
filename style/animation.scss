@@ -1,0 +1,40 @@
+$width:20vw;
+$distance:$width/2;
+$color:lighten(#29C5B4, 10%);
+$num:6;
+.breath {
+  width: $width;
+  height: $width;
+  position: relative;
+}
+
+p {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  position: absolute;
+  // mix-blend-mode: screen;
+  box-shadow: 0 0 2px 2px rgba(#000, .15),inset 0 0 0 1px rgba(#fff,.1);
+  transform-origin: 50% 50%;
+  animation: run 6s cubic-bezier(0.76, 0.02, 0.52, 0.98) infinite alternate-reverse;
+  animation-delay: 5s;
+  @for $i from 1 through $num {
+    $append: atan(-1)*2+((pi()*2/$num)*($i - 1));
+    &:nth-of-type(#{$i}) {
+      background: rgba(adjust-hue($color, $i*15%), .7);
+      transform: rotate(180deg) translate(floor(cos($append)*$distance), floor(sin($append)*$distance));
+    }
+  }
+}
+
+.info {
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+
+@keyframes run {
+  to {
+    transform: none;
+  }
+}

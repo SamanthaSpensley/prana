@@ -119,6 +119,7 @@ footer {
 
 .btn-breathe {
   margin-top: 3vw;
+  margin-bottom: 3vw;
   padding: 4vw 8vw 4vw 8vw;
   font-size: 30px;
 }
@@ -138,9 +139,9 @@ li {
 }
 
 .sequence {
-  border-style: solid !important;
+  /*border-style: solid !important;
   border-width: thin !important;
-  border-color: #D3D3D3 !important;
+  border-color: #D3D3D3 !important;*/
 }
 
 .sequence a {

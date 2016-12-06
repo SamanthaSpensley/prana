@@ -30,7 +30,7 @@ class SequenceShow extends Component {
                  <span>- Hold { this.state.sequence.secondaryHold } count</span>
               }</h5>
             <Link to={ "overview/" } className="btn btn-lg btn-breathe">Breathe On</Link>
-          </div>
+
           {/* <div className="sequence-customize">
             <h3>Customize Your Breather:</h3>
             <h5>Your breath ratio is set to { this.state.sequence.ratio }.</h5>
@@ -41,8 +41,9 @@ class SequenceShow extends Component {
             <h4>Exhale: { this.state.sequence.exhale }</h4>
             <input type="range" min="1" max="8" value="4" id="fader" step="1" />
           </div> */}
-          <div className="flex">
-            <Link to={"/breathers"} className="btn btn-md">Back to Breathers</Link>
+            <div className="flex">
+              <Link to={"/breathers"} className="btn btn-md">Back to Breathers</Link>
+            </div>
           </div>
         </div>
       </div>
