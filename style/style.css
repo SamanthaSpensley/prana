@@ -42,12 +42,20 @@ font-family: 'Source Sans Pro', sans-serif;*/
   flex-direction: column;
   align-items: center;
 }
-.sequence-list {
+.sequence-list, .sequence-show {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white !important;
   width: 100vw;
   height: 100%;
   margin-top: 5vw;
+}
+
+.sequence-show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 80vh;
 }
 
 .sequence-customize {
@@ -87,17 +95,17 @@ footer {
   padding-right: 5vw;
 }
 
-.btn-sm {
+.btn-md {
   background: -webkit-linear-gradient(-90deg, #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #02C39A, #14C96E); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #02C39A, #14C96E); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-90deg, #02C39A, #14C96E); /* Standard syntax */
   box-shadow: 0 1px 2.5px  #193047;
   color: white;
-  margin-top: 1.5vw;
+  margin-top: 2.5vw;
 }
 
-.btn-lg:hover, .btn-sm:hover {
+.btn-lg:hover, .btn-md:hover {
   background: webkit-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Firefox 3.6 to 15 */
