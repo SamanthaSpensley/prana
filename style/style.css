@@ -87,6 +87,11 @@ font-family: 'Source Sans Pro', sans-serif;*/
   box-shadow: inset 0 5px 30px #193047;
 }
 
+.btn-breathe {
+  margin-top: 3vw;
+  padding: 4vw 8vw 4vw 8vw;
+  font-size: 30px;
+}
 
 
 /* ----- lists ----- */

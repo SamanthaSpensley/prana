@@ -46,7 +46,7 @@ class SequenceList extends Component {
           <ul className="list-group">
             {this.renderList()}
           </ul>
-          <Link to={"/"} className="btn btn-lg">Peace out (back to home)</Link>
+          <Link to={"/"} className="btn btn-lg">Peace out (home)</Link>
         </div>
       </div>
     );
