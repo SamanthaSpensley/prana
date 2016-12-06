@@ -30,7 +30,9 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
+    "express-compile-sass": "^3.0.4",
     "lodash": "^3.10.1",
+    "node-sass": "^3.13.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-fontawesome": "^1.4.0",
