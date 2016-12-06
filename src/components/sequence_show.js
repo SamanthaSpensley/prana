@@ -21,14 +21,17 @@ class SequenceShow extends Component {
         <div className="container col-xs-12 col-md-8 col-md-offset-2 float-none">
           <div className="flex">
             <h1>{ this.state.sequence.title }</h1>
-            <h5>Inhale { this.state.sequence.inhale } counts -
+            <h5 className="no-mb">Inhale { this.state.sequence.inhale } counts -
               { this.state.sequence.initialHold > 0 &&
                 <span> Hold { this.state.sequence.initialHold } count - </span>
               }
               Exhale { this.state.sequence.exhale } counts
               { this.state.sequence.secondaryHold > 0 &&
                  <span>- Hold { this.state.sequence.secondaryHold } count</span>
-              }</h5>
+              }
+            </h5>
+            <h5><Link to={"/breathers"}>Customize Your Breather</Link></h5>
+
             <Link to={ this.state.sequence.id + "/breathe" } className="btn btn-lg btn-breathe">Breathe On</Link>
 
           {/* <div className="sequence-customize">

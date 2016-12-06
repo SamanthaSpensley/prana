@@ -50,12 +50,13 @@ font-family: 'Source Sans Pro', sans-serif;*/
   margin-top: 5vw;
 }
 
-.sequence-show {
+.sequence-show, .sequence-start {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
+  margin-top: 0;
 }
 
 .sequence-customize {
@@ -79,7 +80,7 @@ footer {
   background-color: #196C76;
   width: 100%;
   color: white;
-  margin-top: 5vw;
+  /*margin-top: 5vw;*/
 }
 
 /* ----- buttons ----- */
@@ -178,6 +179,10 @@ footer h5 {
   font-size: 15px;
   color: #fff;
   letter-spacing: 1.5px;
+  margin-bottom: 0;
+}
+
+.no-mb {
   margin-bottom: 0;
 }
 

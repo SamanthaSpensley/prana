@@ -1,5 +1,5 @@
 // VARIABLES
-$animation-duration: 6s;
+$animation-duration: 8s;
 
 $all-in: 5;
 $all-out: 100 - $all-in;
@@ -73,8 +73,8 @@ p {
    bottom: 0;
    width: 250px;
    height: 230px;
-   transform: scale(1.5);
-   transform-origin: center bottom;
+   transform: scale(2);
+  //  transform-origin: center bottom;
 }
 
 .shape {
@@ -87,6 +87,7 @@ p {
    animation-iteration-count: infinite;
    animation-fill-mode: forwards;
    animation-timing-function: linear;
+   animation-delay: 3s;
 }
 
 .triangle {
@@ -94,19 +95,23 @@ p {
    width: 100px;
    height: 80px;
    animation-name: triangle;
+   -webkit-clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
    clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
 }
 
 @keyframes triangle {
    #{$all-in}% {
-      clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
+     -webkit-clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
+     clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
    }
    #{$triangle-in}%,
    #{$triangle-out}% {
       // triangle
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
    }
    #{$all-out}% {
+     -webkit-clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
       clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
    }
 }
@@ -116,27 +121,33 @@ p {
    width: 100px;
    height: 100px;
    animation-name: square;
+   -webkit-clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
    clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
 }
 
 @keyframes square {
    #{$all-in}% {
+     -webkit-clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
    }
    #{$triangle-in}% {
       // triangle
+      -webkit-clip-path: polygon(50% 20%, 50% 20%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 20%, 50% 20%, 100% 100%, 0% 100%);
    }
    #{$square-in}%,
    #{$square-out}% {
       // square
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    }
    #{$triangle-out}% {
       // triangle
+      -webkit-clip-path: polygon(50% 20%, 50% 20%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 20%, 50% 20%, 100% 100%, 0% 100%);
    }
    #{$all-out}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%);
    }
 }
@@ -146,35 +157,43 @@ p {
    width: 160px;
    height: 150px;
    animation-name: pentagon;
+   -webkit-clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
    clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
 }
 
 @keyframes pentagon {
    #{$all-in}% {
+      -webkit-clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
       clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
    }
    #{$triangle-in}% {
       // triangle
+      -webkit-clip-path: polygon(50% 47%, 50% 47%, 50% 47%, 81% 100%, 19% 100%);
       clip-path: polygon(50% 47%, 50% 47%, 50% 47%, 81% 100%, 19% 100%);
    }
    #{$square-in}% {
       // square
+      -webkit-clip-path: polygon(19% 33.5%, 50% 33.5%, 81% 33.5%, 81% 100%, 19% 100%);
       clip-path: polygon(19% 33.5%, 50% 33.5%, 81% 33.5%, 81% 100%, 19% 100%);
    }
    #{$pentagon-in}%,
    #{$pentagon-out}% {
       // pentagon
+      -webkit-clip-path: polygon(0% 38%, 50% 0%, 100% 38%, 82% 100%, 18% 100%);
       clip-path: polygon(0% 38%, 50% 0%, 100% 38%, 82% 100%, 18% 100%);
    }
    #{$square-out}% {
       // square
+      -webkit-clip-path: polygon(19% 33.5%, 50% 33.5%, 81% 33.5%, 81% 100%, 19% 100%);
       clip-path: polygon(19% 33.5%, 50% 33.5%, 81% 33.5%, 81% 100%, 19% 100%);
    }
    #{$triangle-out}% {
       // triangle
+      -webkit-clip-path: polygon(50% 47%, 50% 47%, 50% 47%, 81% 100%, 19% 100%);
       clip-path: polygon(50% 47%, 50% 47%, 50% 47%, 81% 100%, 19% 100%);
    }
    #{$all-out}% {
+      -webkit-clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
       clip-path: polygon(52% 100%, 50% 100%, 50% 100%, 82% 100%, 18% 100%);
    }
 }
@@ -184,43 +203,53 @@ p {
    height: 170px;
    margin-left: -100px;
    animation-name: hexagon;
+   -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
    clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
 }
 
 @keyframes hexagon {
    #{$all-in}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
    }
    #{$triangle-in}% {
       // triangle
+      -webkit-clip-path: polygon(50% 53%, 50% 53%, 50% 53%,  50% 53%, 75% 100%, 25% 100%);
       clip-path: polygon(50% 53%, 50% 53%, 50% 53%,  50% 53%, 75% 100%, 25% 100%);
    }
    #{$square-in}% {
       // square
+      -webkit-clip-path: polygon(25% 41.2%, 50% 41.2%, 50% 41.2%, 75% 41.2%, 75% 100%, 25% 100%);
       clip-path: polygon(25% 41.2%, 50% 41.2%, 50% 41.2%, 75% 41.2%, 75% 100%, 25% 100%);
    }
    #{$pentagon-in}% {
       // pentagon
+      -webkit-clip-path: polygon(10% 45.3%, 50% 12%, 50% 12%, 90% 45.3%, 75.5% 100%, 24.5% 100%);
       clip-path: polygon(10% 45.3%, 50% 12%, 50% 12%, 90% 45.3%, 75.5% 100%, 24.5% 100%);
    }
    #{$hexagon-in}%,
    #{$hexagon-out}% {
       // hexagon
+      -webkit-clip-path: polygon(0 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
       clip-path: polygon(0 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
    }
    #{$pentagon-out}% {
       // pentagon
+      -webkit-clip-path: polygon(10% 45.3%, 50% 12%, 50% 12%, 90% 45.3%, 75.5% 100%, 24.5% 100%);
       clip-path: polygon(10% 45.3%, 50% 12%, 50% 12%, 90% 45.3%, 75.5% 100%, 24.5% 100%);
    }
    #{$square-out}% {
       // square
+      -webkit-clip-path: polygon(25% 41.2%, 50% 41.2%, 50% 41.2%, 75% 41.2%, 75% 100%, 25% 100%);
       clip-path: polygon(25% 41.2%, 50% 41.2%, 50% 41.2%, 75% 41.2%, 75% 100%, 25% 100%);
    }
    #{$triangle-out}% {
       // triangle
+      -webkit-clip-path: polygon(50% 53%, 50% 53%, 50% 53%,  50% 53%, 75% 100%, 25% 100%);
       clip-path: polygon(50% 53%, 50% 53%, 50% 53%,  50% 53%, 75% 100%, 25% 100%);
    }
    #{$all-out}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 75.5% 100%, 24.5% 100%);
    }
 }
@@ -230,51 +259,63 @@ p {
    height: 210px;
    margin-left: -115px;
    animation-name: heptagon;
+   -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
    clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
 }
 
 @keyframes heptagon {
    #{$all-in}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
    }
    #{$triangle-in}% {
       // triangle
+      -webkit-clip-path: polygon(50% 62%, 50% 62%, 50% 62%, 50% 62%, 50% 62%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(50% 62%, 50% 62%, 50% 62%, 50% 62%, 50% 62%, 71.8% 100%, 28.2% 100%);
    }
    #{$square-in}% {
       //square
+      -webkit-clip-path: polygon(28.2% 52.5%, 50% 52.5%, 50% 52.5%, 50% 52.5%, 71.8% 52.5%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(28.2% 52.5%, 50% 52.5%, 50% 52.5%, 50% 52.5%, 71.8% 52.5%, 71.8% 100%, 28.2% 100%);
    }
    #{$pentagon-in}% {
       // pentagon
+      -webkit-clip-path: polygon(15.2% 55.8%, 50% 28.8%, 50% 28.8%, 50% 28.8%, 84.8% 55.8%, 72% 100%, 28% 100%);
       clip-path: polygon(15.2% 55.8%, 50% 28.8%, 50% 28.8%, 50% 28.8%, 84.8% 55.8%, 72% 100%, 28% 100%);
    }
    #{$hexagon-in}% {
       // hexagon
+      -webkit-clip-path: polygon(6.8% 59.5%, 28.5% 19.2%, 50% 19.2%, 71.5% 19.2%, 93.2% 59.6%, 72% 100%, 28% 100%);
       clip-path: polygon(6.8% 59.5%, 28.5% 19.2%, 50% 19.2%, 71.5% 19.2%, 93.2% 59.6%, 72% 100%, 28% 100%);
    }
    #{$heptagon-in}%,
    #{$heptagon-out}% {
       // heptagon
+      -webkit-clip-path: polygon(0% 65%, 10% 20%, 50% 0%, 90% 20%, 100% 65%, 72% 100%, 28% 100%);
       clip-path: polygon(0% 65%, 10% 20%, 50% 0%, 90% 20%, 100% 65%, 72% 100%, 28% 100%);
    }
    #{$hexagon-out}% {
       // hexagon
+      -webkit-clip-path: polygon(6.8% 59.5%, 28.5% 19.2%, 50% 19.2%, 71.5% 19.2%, 93.2% 59.6%, 72% 100%, 28% 100%);
       clip-path: polygon(6.8% 59.5%, 28.5% 19.2%, 50% 19.2%, 71.5% 19.2%, 93.2% 59.6%, 72% 100%, 28% 100%);
    }
    #{$pentagon-out}% {
       // pentagon
+      -webkit-clip-path: polygon(15.2% 55.8%, 50% 28.8%, 50% 28.8%, 50% 28.8%, 84.8% 55.8%, 72% 100%, 28% 100%);
       clip-path: polygon(15.2% 55.8%, 50% 28.8%, 50% 28.8%, 50% 28.8%, 84.8% 55.8%, 72% 100%, 28% 100%);
    }
    #{$square-out}% {
       //square
+      -webkit-clip-path: polygon(28.2% 52.5%, 50% 52.5%, 50% 52.5%, 50% 52.5%, 71.8% 52.5%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(28.2% 52.5%, 50% 52.5%, 50% 52.5%, 50% 52.5%, 71.8% 52.5%, 71.8% 100%, 28.2% 100%);
    }
    #{$triangle-out}% {
       // triangle
+      -webkit-clip-path: polygon(50% 62%, 50% 62%, 50% 62%, 50% 62%, 50% 62%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(50% 62%, 50% 62%, 50% 62%, 50% 62%, 50% 62%, 71.8% 100%, 28.2% 100%);
    }
    #{$all-out}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 71.8% 100%, 28.2% 100%);
    }
 }
@@ -284,59 +325,73 @@ p {
    height: 230px;
    margin-left: -125px;
    animation-name: octagon;
+   -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
    clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
 }
 
 @keyframes octagon {
    #{$all-in}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
    }
    #{$triangle-in}% {
       //triangle
+      -webkit-clip-path: polygon(50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 70% 100%, 30% 100%);
       clip-path: polygon(50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 70% 100%, 30% 100%);
    }
    #{$square-in}% {
       // square
+      -webkit-clip-path: polygon(30% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 70% 56.5%, 70% 100%, 30% 100%);
       clip-path: polygon(30% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 70% 56.5%, 70% 100%, 30% 100%);
    }
    #{$pentagon-in}% {
       // pentagon
+      -webkit-clip-path: polygon(18% 59.7%, 50% 35%, 50% 35%, 50% 35%, 50% 35%, 82% 59.7%, 70% 100%, 30% 100%);
       clip-path: polygon(18% 59.7%, 50% 35%, 50% 35%, 50% 35%, 50% 35%, 82% 59.7%, 70% 100%, 30% 100%);
    }
    #{$hexagon-in}% {
       // hexagon
+      -webkit-clip-path: polygon(10% 63%, 30% 26.2%, 50% 26.2%, 50% 26.2%, 70% 26.2%, 90% 63%, 70% 100%, 30% 100%);
       clip-path: polygon(10% 63%, 30% 26.2%, 50% 26.2%, 50% 26.2%, 70% 26.2%, 90% 63%, 70% 100%, 30% 100%);
    }
    #{$heptagon-in}% {
       // heptagon
+      -webkit-clip-path: polygon(4% 68%, 13.2% 27%, 50% 9%, 50% 9%, 86.8% 27%, 96% 68%, 70% 100%, 30% 100%);
       clip-path: polygon(4% 68%, 13.2% 27%, 50% 9%, 50% 9%, 86.8% 27%, 96% 68%, 70% 100%, 30% 100%);
    }
    #{$octagon-in}%,
    #{$octagon-out}% {
       // octagon
+      -webkit-clip-path: polygon(0% 75%, 0% 30%, 30% 0%, 70% 0%, 100% 30%, 100% 75%, 70% 100%, 30% 100%);
       clip-path: polygon(0% 75%, 0% 30%, 30% 0%, 70% 0%, 100% 30%, 100% 75%, 70% 100%, 30% 100%);
    }
    #{$heptagon-out}% {
       // heptagon
+      -webkit-clip-path: polygon(4% 68%, 13.2% 27%, 50% 9%, 50% 9%, 86.8% 27%, 96% 68%, 70% 100%, 30% 100%);
       clip-path: polygon(4% 68%, 13.2% 27%, 50% 9%, 50% 9%, 86.8% 27%, 96% 68%, 70% 100%, 30% 100%);
    }
    #{$hexagon-out}% {
       // hexagon
+      -webkit-clip-path: polygon(10% 63%, 30% 26.2%, 50% 26.2%, 50% 26.2%, 70% 26.2%, 90% 63%, 70% 100%, 30% 100%);
       clip-path: polygon(10% 63%, 30% 26.2%, 50% 26.2%, 50% 26.2%, 70% 26.2%, 90% 63%, 70% 100%, 30% 100%);
    }
    #{$pentagon-out}% {
       // pentagon
+      -webkit-clip-path: polygon(18% 59.7%, 50% 35%, 50% 35%, 50% 35%, 50% 35%, 82% 59.7%, 70% 100%, 30% 100%);
       clip-path: polygon(18% 59.7%, 50% 35%, 50% 35%, 50% 35%, 50% 35%, 82% 59.7%, 70% 100%, 30% 100%);
    }
    #{$square-out}% {
       // square
+      -webkit-clip-path: polygon(30% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 70% 56.5%, 70% 100%, 30% 100%);
       clip-path: polygon(30% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 50% 56.5%, 70% 56.5%, 70% 100%, 30% 100%);
    }
    #{$triangle-out}% {
       //triangle
+      -webkit-clip-path: polygon(50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 70% 100%, 30% 100%);
       clip-path: polygon(50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 50% 65%, 70% 100%, 30% 100%);
    }
    #{$all-out}% {
+      -webkit-clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
       clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 70% 100%, 30% 100%);
    }
 }

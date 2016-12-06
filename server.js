@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
-// const compileSass = require('express-compile-sass')
-// const root = process.cwd();
 
 app.use(express.static(__dirname));
 
@@ -15,6 +13,9 @@ app.listen(port);
 console.log('Server started');
 
 
+
+// const compileSass = require('express-compile-sass')
+// const root = process.cwd();
 
 // app.use(compileSass({
 //   root: root,

@@ -18,7 +18,6 @@ class SequenceStart extends Component {
     return(
 
       <div className="sequence-start">
-        <h1>Hello!!!</h1>
         <div className="container flex">
           <div className="container-start">
             <div className="octagon shape"></div>
