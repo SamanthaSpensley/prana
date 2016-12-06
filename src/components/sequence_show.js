@@ -29,7 +29,7 @@ class SequenceShow extends Component {
               { this.state.sequence.secondaryHold > 0 &&
                  <span>- Hold { this.state.sequence.secondaryHold } count</span>
               }</h5>
-            <Link to={ "overview/" } className="btn btn-lg btn-breathe">Breathe On</Link>
+            <Link to={ this.state.sequence.id + "/breathe" } className="btn btn-lg btn-breathe">Breathe On</Link>
 
           {/* <div className="sequence-customize">
             <h3>Customize Your Breather:</h3>
