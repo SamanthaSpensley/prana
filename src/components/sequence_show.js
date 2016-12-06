@@ -25,13 +25,15 @@ class SequenceShow extends Component {
           </div>
           <div className="sequence-customize">
             <h3>Customize Your Breather:</h3>
+            <h5>Your breath ratio is set to { this.state.sequence.ratio }.</h5>
+            <h5>While the ratio will stay the same, use the sliders below to adjust the total duration of your breather, the inhale count or the exhale count.</h5>
             <h4>Inhale: { this.state.sequence.inhale }</h4>
             <Slider />
             {/* <input type="range" min="1" max="8" value="4" id="fader" step="1" /> */}
             <h4>Exhale: { this.state.sequence.exhale }</h4>
             {/* <input type="range" min="1" max="8" value="4" id="fader" step="1" /> */}
           </div>
-          <Link to={"/breathers"} className="btn btn-lg">Back to Breathers</Link>
+          <Link to={"/breathers"} className="btn btn-sm">Back to Breathers</Link>
         </div>
       </div>
     )

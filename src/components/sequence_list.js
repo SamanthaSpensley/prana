@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSequences } from '../actions/index';
 import { Link } from 'react-router';
-import FontAwesome from 'react-fontawesome';
 
 class SequenceList extends Component {
   componentWillMount() {
@@ -15,7 +14,7 @@ class SequenceList extends Component {
       return (
         <div>
           <li key={ sequence.id } className="list-group-item sequence">
-            <Link to={ "breathers/" + sequence.id } className="btn btn-block">{ sequence.title }</Link>
+            <Link to={ "breathers/" + sequence.id } className="link flex">{ sequence.title }</Link>
             {/* <FontAwesome name="fa fa-angle-down" aria-hidden="true" /> */}
             <div>
               <hr/>

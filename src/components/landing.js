@@ -41,7 +41,7 @@ const Landing = (props) => {
               <h5>First, select a sequence that meets your needs</h5>
               <h3>2. Select optional settings</h3>
               <h5>Next, customize settings like the total duration or inhale and exhale counts</h5>
-              <h3><Link to={ "/breathers" }>3. Breathe!</Link></h3>
+              <h3><Link to={ "/breathers" } className="link">3. Breathe!</Link></h3>
             </div>
           </div>
 

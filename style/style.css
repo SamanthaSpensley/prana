@@ -62,6 +62,18 @@ font-family: 'Source Sans Pro', sans-serif;*/
   float: none;
 }
 
+/* ----- footer ----- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #196C76;
+  width: 100%;
+  color: white;
+  margin-top: 5vw;
+}
+
 /* ----- buttons ----- */
 .btn-lg {
   background: -webkit-linear-gradient(-90deg, #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
@@ -75,7 +87,17 @@ font-family: 'Source Sans Pro', sans-serif;*/
   padding-right: 5vw;
 }
 
-.btn-lg:hover {
+.btn-sm {
+  background: -webkit-linear-gradient(-90deg, #02C39A, #30CDAC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #02C39A, #14C96E); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #02C39A, #14C96E); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #02C39A, #14C96E); /* Standard syntax */
+  box-shadow: 0 1px 2.5px  #193047;
+  color: white;
+  margin-top: 1.5vw;
+}
+
+.btn-lg:hover, .btn-sm:hover {
   background: webkit-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #02B28C, #2CBB9D); /* For Firefox 3.6 to 15 */
@@ -141,6 +163,25 @@ h5 {
   color: #151515;
   letter-spacing: 0;
 }
+
+footer h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+}
+
+/* ----- link ----- */
+.link {
+  color: #196C76 !important;
+  font-weight: bold !important;
+}
+
+.link:hover {
+  text-decoration: none !important;
+}
+
 
 /* ----- animations ----- */
 @keyframes spin {
