@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline",
     "postinstall": "webpack -p",
-    "start": "webpack-dev-server --port $PORT",
+    "start": "webpack-dev-server --inline --port $PORT",
     "build-css": "node-sass --include-path scss style/animation.scss style/animation.css"
   },
   "author": "",
