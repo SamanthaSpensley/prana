@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline",
     "postinstall": "webpack -p",
-    "start": "webpack-dev-server --inline --port $PORT",
+    "start": "webpack && http-server -p $PORT",
     "build-css": "node-sass --include-path scss style/animation.scss style/animation.css"
   },
   "author": "",
@@ -32,6 +32,7 @@
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
     "express-compile-sass": "^3.0.4",
+    "http-server": "^0.9.0",
     "lodash": "^3.10.1",
     "node-sass": "^3.13.0",
     "react": "^0.14.3",
