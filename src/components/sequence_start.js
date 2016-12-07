@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchSequence } from '../actions/index';
 import { Link } from 'react-router';
-import Countdown from './countdown_timer';
+// import Countdown from './countdown_timer';
 
 class SequenceStart extends Component {
   static contextTypes = {
