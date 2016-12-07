@@ -14,3 +14,5 @@ console.log('Server started');
 
 // when deploying to heroku, replace start script with this:
 // "start": "webpack && http-server -p $PORT",
+
+//blahhhhhhh heroku not workinggg!!!
