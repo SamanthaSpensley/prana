@@ -45,7 +45,7 @@ p {
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-delay: 3s; }
+  animation-delay: 1s; }
 
 .triangle {
   margin-left: -50px;

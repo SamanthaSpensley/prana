@@ -12,21 +12,5 @@ app.get('*', (req, res) => {
 app.listen(port);
 console.log('Server started');
 
-
-
-// const compileSass = require('express-compile-sass')
-// const root = process.cwd();
-
-// app.use(compileSass({
-//   root: root,
-//   sourceMap: true,
-//   sourceComments: true,
-//   watchFiles: true,
-//   logToConsole: false
-// }));
-//
-// app.use(express.static(root));
-//
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'index.html'));
-// });
+// when deploying to heroku, replace start script with this:
+// "start": "webpack && http-server -p $PORT",

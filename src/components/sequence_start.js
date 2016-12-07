@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchSequence } from '../actions/index';
 import { Link } from 'react-router';
+import Countdown from './countdown_timer';
 
 class SequenceStart extends Component {
   static contextTypes = {
@@ -20,6 +21,7 @@ class SequenceStart extends Component {
       <div className="sequence-start">
         <div className="container flex">
           <div className="container-start">
+            {/* <Countdown secondsRemaining="10"/> */}
             <div className="octagon shape"></div>
             <div className="heptagon shape"></div>
             <div className="hexagon shape"></div>
