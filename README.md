@@ -1,6 +1,6 @@
 ##Sync - Sync The Breath
 
-Sync is a tool to help people realize the benefits of conscious, controlled breathing by providing users visually guided breathing sequences.
+Sync is a tool to help people realize the benefits of conscious, controlled breathing by providing users with visually guided breathing sequences.
 
 Sync utilizes calming visualizations (made using Sass and CSS animations) to provide users with visual inhale/exhale cues.
 
@@ -12,4 +12,4 @@ Users select a breather (pre-populated breathing sequence). Each breather has a 
 React, Redux, Node.js, Express, JavaScript, Sass, CSS animations
 
 ###Deployed Site
-View Sync here @https://syncthebreath.herokuapp.com/
+View Sync here: https://syncthebreath.herokuapp.com/
